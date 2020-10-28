@@ -9,24 +9,35 @@
     <h4>Halaman Tampil</h4>
     <table class="table table-bordered">
         <thead>
-            <th>No</th>
-            <th>JUDUL</th>
-            <th>ISI</th>
-            <th>PENULIS</th>
+            <tr>
+                <th>No</th>
+                <th>JUDUL</th>
+                <th>ISI</th>
+                <th>PENULIS</th>
+                <th>AKSI</th>
+            </tr>
         </thead>
+
+        
+
+        <tbody>
 
         <?php 
         $no = 1;
-        foreach ($data as $dt): ?>
-        
-        <tbody>
-            <td><?= $no++; ?></td>
-            <td><?= $dt->judul; ?></td>
-            <td><?= $dt->isi; ?></td>
-            <td><?= $dt->penulis; ?></td>            
+        foreach ($isi as $data ) { ?>
+
+            <tr>
+                <td><?= $no++; ?></td>
+                <td><?= $data->judul; ?></td>
+                <td><?= $data->isi; ?></td>
+                <td><?= $data->penulis; ?></td>
+            </tr>
+        <?php } ?>
+
         </tbody>
 
-        <?php endforeach; ?>
+       
+
     </table>
 </body>
 </html>
