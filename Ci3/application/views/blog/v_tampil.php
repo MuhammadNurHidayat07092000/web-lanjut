@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Blog</title>
+    
+    <link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css'); ?>">
+    
+    <style>
+    
+    body{
+        padding: 20px;
+    }
+    </style>
 </head>
 <body>
-    <h4>Halaman Tampil</h4>
+    <h4 class="text text-center">Halaman Tampil</h4>
     <table class="table table-bordered">
-        <thead>
+        <thead class="text text-center">
             <tr>
                 <th>No</th>
-                <th>JUDUL</th>
-                <th>ISI</th>
-                <th>PENULIS</th>
-                <th>AKSI</th>
+                <th>Judul</th>
+                <th>Isi</th>
+                <th>Penulis</th>
+                <th>Aksi</th>
             </tr>
         </thead>
-
-        
 
         <tbody>
 
@@ -31,6 +38,7 @@
                 <td><?= $data->judul; ?></td>
                 <td><?= $data->isi; ?></td>
                 <td><?= $data->penulis; ?></td>
+                <td></td>
             </tr>
         <?php } ?>
 
