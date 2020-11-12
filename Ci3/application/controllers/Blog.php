@@ -23,6 +23,11 @@ class Blog extends CI_Controller
 
     public function tambahData()
     {
+        $this->load->view('blog/v_tambahData');
+    }
+
+    public function prosesTambah()
+    {
         $judul    = $this->input->post('judul');
         $isi      = $this->input->post('isi');
         $penulis  = $this->input->post('penulis');
@@ -34,6 +39,6 @@ class Blog extends CI_Controller
         );
 
         $this->m_blog->insertData($data);
-        // redirect('Blog/tampilData');
+        redirect('Blog/tampilData');
     }
 }

@@ -13,6 +13,6 @@ class m_blog extends CI_Model
 
     public function insertData($data)
     {
-        return $this->db->insert($this->table, $data);
+        $this->db->insert($this->table, $data);
     }
 }
