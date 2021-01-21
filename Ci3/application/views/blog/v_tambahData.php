@@ -19,7 +19,7 @@
     <div class="container">
         <h2 class="text text-center">Tambah Data</h2>
         <hr>
-        <form action="<?= base_url('Blog/prosesTambah'); ?>" method="post">
+        <form action="<?= base_url('Blog/tambahData'); ?>" method="post">
 
             <div class="form-group">
                 <label for="judul">JUDUL</label>
@@ -36,8 +36,8 @@
                 <input type="text" name="penulis" id="penulis" class="form-control">
             </div>
             <div class="form-group">
-                <input type="submit" name="submit" value="Simpan" class="btn btn-primary">
-                <a href="<?= base_url('blog/tampilData'); ?>" class="btn btn-danger">Batal</a>
+                <input type="submit" name="submit" value="Simpan" class="btn btn-success">
+                <a href="<?= base_url('blog/tampilData'); ?>" class="btn btn-danger">Kembali</a>
             </div>
         </form>
     </div>

@@ -41,4 +41,37 @@ class Blog extends CI_Controller
         $this->m_blog->insertData($data);
         redirect('Blog/tampilData');
     }
+
+    public function hapusData($id)
+    {
+        $where = array('id' => $id);
+        $this->m_blog->deleteData($where, 'blog');
+        redirect('blog/tampilData');
+    }
+
+    public function vUbahData($id)
+    {
+        $where = array('id' => $id);
+        $data['blog'] = $this->m_blog->vEditData($where, 'blog')->result();
+
+        $this->load->view('blog/v_edit', $data);
+    }
+
+    public function ubahData()
+    {
+        $id = $this->input->post('id');
+        $judul    = $this->input->post('judul');
+        $isi      = $this->input->post('isi');
+        $penulis  = $this->input->post('penulis');
+
+        $data     = array(
+            'judul'   => $judul,
+            'isi'     => $isi,
+            'penulis' => $penulis
+        );
+
+        $where = array('id' => $id);
+        $this->m_blog->updateData($where, $data, 'blog');
+        redirect('blog/tampilData');
+    }
 }

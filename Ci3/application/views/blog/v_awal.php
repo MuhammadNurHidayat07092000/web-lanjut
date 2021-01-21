@@ -9,7 +9,7 @@
 
     <style>
         body {
-            background-image: url('../assets/bg/p3.jpg');
+            background-image: url('./../assets/bg/p3.jpg');
             background-size: cover;
         }
     </style>
